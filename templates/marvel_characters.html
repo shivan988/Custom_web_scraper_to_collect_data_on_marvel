@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marvel Characters</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+{{ bootstrap.load_css() }}
+    <h1 class="title">Marvel Universe Characters</h1>
+    <div class="container">
+        {% for letter, chars in characters.items() %}
+            <hr class="divider">
+            <h2>{{ letter }}</h2>
+            <div class="row">
+                {% for character in chars %}
+                    <div class="col-md-3 mb-4">
+                        <div class="card character-card" style="width: 100%; min-height: 120px;">
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <a href="#" class="btn btn-info character-btn w-100 h-100 d-flex align-items-center justify-content-center">
+                                    {{ character|upper }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

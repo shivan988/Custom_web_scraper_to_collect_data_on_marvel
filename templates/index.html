@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marvel Data Index</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+{{bootstrap.load_css()}}
+    <h1 class="title">Welcome to Marvel Data</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="link-container">
+                    <a href="{{ url_for('marvel_phases') }}" class="btn btn-primary link-btn">Movies</a>
+                    <hr class="divider">
+                    <a href="{{ url_for('marvel_tv_series') }}" class="btn btn-primary link-btn">TV Series</a>
+                    <hr class="divider">
+                    <a href="{{ url_for('suits') }}" class="btn btn-primary link-btn">Suit Data</a>
+                    <hr class="divider">
+                    <a href="{{ url_for('marvel_characters') }}" class="btn btn-primary link-btn">Marvel Characters</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

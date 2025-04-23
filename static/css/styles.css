@@ -1,0 +1,95 @@
+.cards {
+    width: 500px;
+    height: 100px; /* Add a height for better visibility */
+    margin-top: 20px;
+    color: gold;
+    background-color: red;
+    border: 4px solid black; /* Solid border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow:
+        10px 10px 0 0 gold, /* Colored shadow */
+        14px 14px 0 4px black; /* Darker outline shadow */
+    font-family: 'Stark', sans-serif; /* Use the Stark font */
+}
+
+h1{
+    font-family: 'algerian';
+    color: brown !important;
+}
+
+
+.container {
+    max-width: 800px; /* Limit container width for better readability */
+    margin: auto; /* Center the container */
+    padding: 20px; /* Add some padding around the content */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+.title {
+    color: #FFD700; /* Golden color for the title */
+    text-align: center; /* Center the title */
+}
+
+.divider {
+    border-color: #FFD700; /* Golden color for the divider */
+}
+
+
+
+.capability {
+    margin-bottom: 10px; /* Add some space between capabilities */
+}
+
+
+
+/*enhanced ai index.html */
+body {
+    background-image: url("https://wallpaperaccess.com/full/2454608.jpg");
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Centers the image horizontally and vertically */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    min-height: 100vh; /* Ensures the body takes up at least the full viewport height */
+    font-family: 'Algerian', sans-serif; /* Use a stylish font */
+    margin: 0; /* Remove default body margins to ensure full coverage */
+}
+
+
+.container {
+    max-width: 800px; /* Limit container width for better readability */
+    margin-top: 50px; /* Center the container */
+    padding: 20px; /* Add some padding around the content */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+
+}
+
+.title {
+    color: yellow !important; /* Golden color for the title */
+    text-align: center; /* Center the title */
+}
+
+.divider {
+    border-color: red; /* Golden color for the divider */
+}
+
+.suit-card {
+    background-color: #333; /* Dark background for the card */
+    color: #FFF; /* White text color */
+    padding: 20px; /* Add some padding inside the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+    margin-top:20px
+}
+
+.suit-btn {
+    width: 100%; /* Make the button full-width */
+    font-size: 16px; /* Increase font size for readability */
+    padding: 20px; /* Add some padding for better spacing */
+}
+
+.row {
+    justify-content: center; /* Center the cards horizontally */
+}

@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Suit Detail</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+{{ bootstrap.load_css() }}
+    <div class="container">
+        <h1 class="title">Capabilities of the Armour</h1>
+        <hr class="divider">
+        {% for key, value in data.items() %}
+            {% if id == loop.index %}
+                <div class="card suit-card">
+                    {% for val in value %}
+                        <p class="capability"><b>{{ val|capitalize }}</b></p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endfor %}
+        <hr class="divider">
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>movies details</title>-->
+<!--    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1 class="title">This is the list of movies</h1>-->
+<!--    <div class="container">-->
+<!--    {% for key,value in movies.items() %}-->
+<!--    {% if id == loop.index %}-->
+<!--&lt;!&ndash;    <p>{{value}}</p>&ndash;&gt;-->
+<!--        {% for val in value %}-->
+<!--        <ul>-->
+<!--            <li>Marvels {{val|capitalize}}</li>-->
+<!--        </ul>-->
+
+<!--        {% endfor %}-->
+<!--    {% endif %}-->
+<!--    {% endfor %}-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marvel Movie Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+{{bootstrap.load_css()}}
+    <h1 class="title">Marvel Movie Details</h1>
+    <div class="container">
+        {% for key, value in movies.items() %}
+            {% if id == loop.index %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>{{ key|upper }}</h2>
+                        <hr class="divider">
+                        <ul class="movie-list">
+                            {% for val in value %}
+                                <li class="btn btn-warning" style="margin-bottom:20px; margin-right:20px">Marvel's {{ val|capitalize }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>

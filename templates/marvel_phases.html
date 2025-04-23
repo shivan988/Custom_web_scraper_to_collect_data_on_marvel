@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marvel Movies</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+{{bootstrap.load_css()}}
+    <h1 class="title">Phases of Marvel Movies</h1>
+    <div class="container">
+        <div class="row">
+            {% for key, value in movies.items() %}
+                <div class="col-md-3">
+                    <a style="margin-bottom:20px" href="{{ url_for('marvel_movies', id=loop.index) }}" class="btn btn-warning">
+                        {{ key|upper }}
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

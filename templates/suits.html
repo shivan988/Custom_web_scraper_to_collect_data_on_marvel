@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+{{ bootstrap.load_css() }}
+    <div class="container">
+        <h1 class="title">Ironman Armours</h1>
+        <hr class="divider">
+        <div class="row">
+            {% for key, value in data.items() %}
+                <div class="col-md-3">
+                    <div class="card suit-card">
+                        <ul>
+                            <li>
+                                <a href="{{ url_for('detail_suit', id=loop.index) }}" class="btn btn-warning suit-btn">
+                                    IRONMAN: {{ key|upper }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <hr class="divider">
+    </div>
+</body>
+</html>
